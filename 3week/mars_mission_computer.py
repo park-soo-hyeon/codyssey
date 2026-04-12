@@ -32,7 +32,7 @@ class DummySensor:
             f"내부 산소 농도: {self.env_values['mars_base_internal_oxygen']}\n"
         )
         
-        with open('sensor_log.txt', 'a', encoding='utf-8') as file:
+        with open('./3week/sensor_log.txt', 'a', encoding='utf-8') as file:
             file.write(log_data)
             
         # env_values를 return 함
