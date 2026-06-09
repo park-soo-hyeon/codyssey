@@ -22,7 +22,6 @@ class MySQLHelper:
         self.connection.close()
 
 def main():
-    # ⚠️ 본인의 MySQL 비밀번호와 DB 이름으로 다시 변경해 주세요!
     db_host = 'localhost'
     db_user = 'root'
     db_password = 'zlekfl8901' 
@@ -61,7 +60,7 @@ def main():
                 if row:
                     mars_date = row[1]
                     
-                    # 💡 해결된 부분: '21.4' 같은 소수점 문자열을 float로 먼저 바꾼 뒤 int로 변환 (소수점은 버려짐)
+                    # '21.4' 같은 소수점 문자열을 float로 먼저 바꾼 뒤 int로 변환 (소수점은 버려짐)
                     temp = int(float(row[2]))     
                     storm = int(float(row[3]))    
                     
